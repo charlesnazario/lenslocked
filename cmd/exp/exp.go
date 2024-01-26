@@ -6,7 +6,8 @@ import (
 )
 
 type User struct {
-	Name string
+	Name     string
+	Children map[string]int
 }
 
 func main() {
@@ -17,6 +18,10 @@ func main() {
 
 	user := User{
 		Name: "Charlie",
+		Children: map[string]int{
+			"Charlotte": 8,
+			"Amelia":    7,
+		},
 	}
 
 	err = t.Execute(os.Stdout, user)

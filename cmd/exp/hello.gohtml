@@ -1,1 +1,2 @@
-<h1>Hello, {{.Name}}</h1>
+<h1>Hello, {{range $key, $value := .Children}} Name: {{$key}} ({{$value}}) {{end}}</h1>
+{{if gt (len .Children) 1}}WOW You are Busy!!{{else}}Just 1, jammin{{end}}
